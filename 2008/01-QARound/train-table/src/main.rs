@@ -1,7 +1,8 @@
-use priority_queue::PriorityQueue;
 use std::io;
 use std::io::prelude::*;
 use std::collections::VecDeque;
+use std::cmp::Ordering;
+use std::collections::BinaryHeap;
 
 fn flatten<T>(nested: Vec<Vec<T>>) -> VecDeque<T> {
     nested.into_iter().flatten().collect()
@@ -47,8 +48,6 @@ fn solve(words_input: &mut VecDeque<&str>) {
     let starts_from_a = read_number(words_input).expect("A starts should be a number");
     let starts_from_b = read_number(words_input).expect("B starts should be a number");
     print!("{0} {1}", starts_from_a, starts_from_b);
-
-    let mut pq = PriorityQueue::<Travel, i32>::new();
 }
 
 fn main() {

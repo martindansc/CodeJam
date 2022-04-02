@@ -77,6 +77,5 @@ fn main() {
     for n in 1..=num {
         print!("Case #{0}: ", n);
         solve(&mut words_input);
-        println!();
     }
 }
